@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { ServerConnection } from "./components/server-connection";
+import socketIOClient from "socket.io-client";
 import { Start } from "./components/start";
 import { Main } from "./components/main";
 import { End } from "./components/end";
 import "./App.scss";
 
 export const App = () => {
-  const [server, setServer] = useState(null);
+  // const [server, setServer] = useState(null);
+  const server = socketIOClient("/");
   const [gameData, setgameData] = useState(null);
   const [player, setPlayer] = useState(null);
   const [roomName, setRoomName] = useState(null);
@@ -57,7 +59,7 @@ export const App = () => {
 
   return (
     <div className="app">
-      {!server && <ServerConnection setServer={setServer} />}
+      {/* {!server && <ServerConnection setServer={setServer} />} */}
       {server && !gameData && (
         <Start server={server} setgameData={setgameData} />
       )}

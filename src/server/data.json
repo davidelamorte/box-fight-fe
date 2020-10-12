@@ -1,0 +1,73 @@
+{
+  "boxes": [
+    {
+      "position": [-6, 0, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, -6, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 0, -6],
+      "owner": 0
+    },
+    {
+      "position": [-3, 0, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, -3, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 0, -3],
+      "owner": 0
+    },
+    {
+      "position": [-3, -3, 0],
+      "owner": 0
+    },
+    {
+      "position": [-6, -6, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 0, 0],
+      "owner": 0
+    },
+    {
+      "position": [3, 3, 0],
+      "owner": 0
+    },
+    {
+      "position": [6, 6, 0],
+      "owner": 0
+    },
+    {
+      "position": [3, 0, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 3, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 0, 3],
+      "owner": 0
+    },
+    {
+      "position": [6, 0, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 6, 0],
+      "owner": 0
+    },
+    {
+      "position": [0, 0, 6],
+      "owner": 0
+    }
+  ],
+  "colors": ["lightblue", "#f50057", "#03a9f4"]
+}
