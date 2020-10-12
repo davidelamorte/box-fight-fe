@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/box-fight-fe/static/css/main.c96713ed.chunk.css",
+    "main.js": "/box-fight-fe/static/js/main.eafb08c7.chunk.js",
+    "main.js.map": "/box-fight-fe/static/js/main.eafb08c7.chunk.js.map",
+    "runtime-main.js": "/box-fight-fe/static/js/runtime-main.62b58523.js",
+    "runtime-main.js.map": "/box-fight-fe/static/js/runtime-main.62b58523.js.map",
+    "static/js/2.1f6a6366.chunk.js": "/box-fight-fe/static/js/2.1f6a6366.chunk.js",
+    "static/js/2.1f6a6366.chunk.js.map": "/box-fight-fe/static/js/2.1f6a6366.chunk.js.map",
+    "index.html": "/box-fight-fe/index.html",
+    "precache-manifest.bdfd02e35353e7c791ed72ccde77de1f.js": "/box-fight-fe/precache-manifest.bdfd02e35353e7c791ed72ccde77de1f.js",
+    "service-worker.js": "/box-fight-fe/service-worker.js",
+    "static/css/main.c96713ed.chunk.css.map": "/box-fight-fe/static/css/main.c96713ed.chunk.css.map",
+    "static/js/2.1f6a6366.chunk.js.LICENSE.txt": "/box-fight-fe/static/js/2.1f6a6366.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62b58523.js",
+    "static/js/2.1f6a6366.chunk.js",
+    "static/css/main.c96713ed.chunk.css",
+    "static/js/main.eafb08c7.chunk.js"
+  ]
+}
