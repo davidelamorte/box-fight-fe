@@ -1,0 +1,30 @@
+.end {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .playerOne,
+  .playerTwo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .playerOne {
+    strong {
+      color: #f50057;
+    }
+  }
+
+  .playerTwo {
+    strong {
+      color: #03a9f4;
+    }
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}

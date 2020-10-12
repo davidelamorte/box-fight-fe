@@ -1,0 +1,17 @@
+.main {
+  position: relative;
+  .waiting {
+    position: absolute;
+    bottom: -45vh;
+    width: 400px;
+    strong {
+      font-weight: bold;
+      color: #f50057;
+    }
+    .goBack {
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
