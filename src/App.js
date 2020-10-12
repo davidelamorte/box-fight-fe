@@ -4,7 +4,10 @@ import socketIOClient from "socket.io-client";
 import { Start } from "./components/start";
 import { Main } from "./components/main";
 import { End } from "./components/end";
+import shortid from "shortid";
+
 import "./App.scss";
+const clientID = shortid.generate();
 
 export const App = () => {
   // const [server, setServer] = useState(null);
@@ -61,7 +64,7 @@ export const App = () => {
     <div className="app">
       {/* {!server && <ServerConnection setServer={setServer} />} */}
       {server && !gameData && (
-        <Start server={server} setgameData={setgameData} />
+        <Start server={server} setgameData={setgameData} clientID={clientID} />
       )}
       {gameData && server && !endResults && (
         <Main
@@ -71,6 +74,7 @@ export const App = () => {
           gameStarted={gameStarted}
           roomName={roomName}
           restartGame={restartGame}
+          clientID={clientID}
         />
       )}
       {endResults && <End endResults={endResults} restartGame={restartGame} />}

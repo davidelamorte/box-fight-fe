@@ -13,9 +13,9 @@ const clientRooms = {};
 app.use(express.static(__dirname + "/../../build"));
 
 io.on("connection", (client) => {
-  const handleNewGame = () => {
+  const handleNewGame = (clientID) => {
     let roomName = shortid.generate();
-    clientRooms[client.id] = roomName;
+    clientRooms[clientID] = roomName;
     state[roomName] = cloneDeep(data);
     client.join(roomName);
     client.number = 1;
@@ -27,22 +27,22 @@ io.on("connection", (client) => {
     });
   };
 
-  const handleJoinGame = (roomName) => {
-    if (!io.sockets.adapter.rooms[roomName]) return;
-    clientRooms[client.id] = roomName;
-    client.join(roomName);
+  const handleJoinGame = (data) => {
+    if (!io.sockets.adapter.rooms[data.roomName]) return;
+    clientRooms[data.clientID] = data.roomName;
+    client.join(data.roomName);
     client.number = 2;
     client.emit("gameStarted", {
-      gameData: state[roomName],
+      gameData: state[data.roomName],
       player: 2,
-      roomName: roomName,
+      roomName: data.roomName,
     });
 
-    io.sockets.in(roomName).emit("playerJoined");
+    io.sockets.in(data.roomName).emit("playerJoined");
   };
 
   const handleGameChange = (change) => {
-    const roomName = clientRooms[client.id];
+    const roomName = clientRooms[change.clientID];
     state[roomName].boxes[change.key].owner = change.player;
     const endGameResults = handleEndGame(state[roomName].boxes);
 

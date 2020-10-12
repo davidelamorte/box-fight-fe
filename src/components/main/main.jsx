@@ -11,12 +11,14 @@ export const Main = ({
   gameStarted,
   roomName,
   restartGame,
+  clientID,
 }) => {
   const onBoxClick = (key) => {
     if (gameStarted) {
       server.emit("gameChange", {
         key: key,
         player: player,
+        clientID: clientID,
       });
     }
   };

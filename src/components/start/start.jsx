@@ -7,15 +7,18 @@ import { Box } from "../box";
 
 softShadows();
 
-export const Start = ({ server }) => {
+export const Start = ({ server, clientID }) => {
   const [gameCode, setGameCode] = useState(null);
 
   const onNewGameClick = () => {
-    server.emit("newGame");
+    server.emit("newGame", clientID);
   };
 
   const onJoinGameClick = () => {
-    server.emit("joinGame", gameCode);
+    server.emit("joinGame", {
+      roomName: gameCode,
+      clientID: clientID,
+    });
   };
 
   const handleChange = (event) => {
